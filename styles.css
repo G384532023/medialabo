@@ -1,0 +1,79 @@
+body {
+    background-color: #007bff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    background-color: #fff; /* 背景色を白色に設定 */
+    border-radius: 8px; /* 角丸を設定 */
+    width: 70%; /* 幅を設定 */
+    max-width: 600px; /* 最大幅を設定 */
+    padding: 20px; /* 内側の余白を設定 */
+    text-align: center; /* テキストを中央揃え */
+    border: 2px solid #87c1ff;
+  }
+
+  /* ヘッダーのスタイル */
+  .header {
+    background-color: #fff; /* ヘッダーの背景色を白色に設定 */
+    color: #007bff; /* ヘッダーテキストの色を青色に設定 */
+    text-shadow:#0c6f81 0 0 10px;
+    padding: 20px; /* ヘッダーの余白 */
+    text-align: center; /* テキストを中央揃え */
+    width: 92%; /* ヘッダーの幅を固定 */
+    max-width: 600px; /* 最大幅を設定 */
+    border-radius: 8px; /* ボーダーの角丸を設定 */
+    margin-bottom: 20px; /* ボーダーの下部に余白を設定 */
+  }
+  
+  .header__title {
+    margin: 0; /* タイトルの上下のマージンを0に設定 */
+    font-size: 24px; /* タイトルのフォントサイズ */
+  }
+  /* ボックスのスタイル */
+  .category {
+    text-align: left;
+    background-color: #fff; /* カテゴリーの背景色を白色に設定 */
+    border: 2px solid #007bff; /* ボーダーの色を青色に設定 */
+    border-radius: 8px; /* ボーダーの角丸を設定 */
+    padding: 20px; /* 内側の余白を設定 */
+    margin-bottom: 20px; /* ボーダーの下部に余白を設定 */
+    width: 92%; /* カテゴリーの幅を固定 */
+    max-width: 600px; /* 最大幅を設定 */
+    opacity: 0; /* 初期状態で非表示 */
+  }
+  
+  /* 右からフェードインするアニメーション */
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-50px); /* 右側に50px移動 */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* 元の位置に移動 */
+    }
+  }
+  
+  @keyframes waveAnimation {
+    0% {
+      transform: translateY(0) rotateY(0);
+    }
+    50% {
+      transform: translateY(-25%) rotateY(360deg);
+    }
+    100% {
+      transform: translateY(0) rotateY(0);
+    }
+  }
+
+  /* 一つずつ遅れてフェードインさせるためのクラス */
+  .category--fade-right {
+    animation: fadeInRight 1s forwards; /* フェードインアニメーション */
+  }
+
+  
