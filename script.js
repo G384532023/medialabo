@@ -9,4 +9,3 @@ document.addEventListener("DOMContentLoaded", function () {
     delay += 500; // 0.5秒ごとに遅延
   });
 });
-

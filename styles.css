@@ -1,12 +1,12 @@
 body {
-    background-color: #007bff;
+    background: linear-gradient(#00b3ff, #0a16fb);
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .container {
     background-color: #fff; /* 背景色を白色に設定 */
     border-radius: 8px; /* 角丸を設定 */
@@ -24,12 +24,34 @@ body {
     text-shadow:#0c6f81 0 0 10px;
     padding: 20px; /* ヘッダーの余白 */
     text-align: center; /* テキストを中央揃え */
-    width: 92%; /* ヘッダーの幅を固定 */
+    width: 100%; /* ヘッダーの幅を固定 */
     max-width: 600px; /* 最大幅を設定 */
     border-radius: 8px; /* ボーダーの角丸を設定 */
     margin-bottom: 20px; /* ボーダーの下部に余白を設定 */
+    box-sizing: border-box;
+
   }
-  
+  .loading::before, .loading::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+  /* オレンジの円環（１２０度時計回りに回転） */
+  .loading::before{
+    border-top:10px solid #e67e22;
+    transform: rotate(120deg);
+  }
+  /* ブルーの円環（２4０度時計回りに回転） */
+  .loading::after{
+    border-top:10px solid #3498db;
+    transform: rotate(240deg);
+  }
+
   .header__title {
     margin: 0; /* タイトルの上下のマージンを0に設定 */
     font-size: 24px; /* タイトルのフォントサイズ */
@@ -40,11 +62,12 @@ body {
     background-color: #fff; /* カテゴリーの背景色を白色に設定 */
     border: 2px solid #007bff; /* ボーダーの色を青色に設定 */
     border-radius: 8px; /* ボーダーの角丸を設定 */
-    padding: 20px; /* 内側の余白を設定 */
+    padding: 22px; /* 内側の余白を設定 */
     margin-bottom: 20px; /* ボーダーの下部に余白を設定 */
-    width: 92%; /* カテゴリーの幅を固定 */
+    width: 100%; /* カテゴリーの幅を固定 */
     max-width: 600px; /* 最大幅を設定 */
     opacity: 0; /* 初期状態で非表示 */
+    box-sizing: border-box;
   }
   
   /* 右からフェードインするアニメーション */
@@ -76,4 +99,5 @@ body {
     animation: fadeInRight 1s forwards; /* フェードインアニメーション */
   }
 
+ 
   
