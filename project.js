@@ -351,6 +351,7 @@ function searchData() {
 }
 
 function displayNHKData(resultDiv) {
+    console.log(nhkData); // NHKデータをコンソールに出力
     var nhkHTML = "<div class='data-box'><h2>NHKデータ</h2>";
     nhkHTML += "<table>";
     nhkHTML += "<tr><th>番組名</th><th>放送開始時間</th><th>放送終了時間</th><th>放送エリア</th></tr>";
@@ -367,6 +368,7 @@ function displayNHKData(resultDiv) {
 }
 
 function displayGourmetData(resultDiv) {
+    console.log(gourmetData); // グルメデータをコンソールに出力
     var gourmetHTML = "<div class='data-box'><h2>グルメデータ</h2>";
     gourmetHTML += "<table>";
     gourmetHTML += "<tr><th>項目名</th><th>項目の説明</th></tr>";
@@ -393,6 +395,7 @@ function displayGourmetData(resultDiv) {
 
 
 function displayWeatherData(resultDiv) {
+    console.log(weatherData); // 天気データをコンソールに出力
     var weatherHTML = "<div class='data-box'><h2>天気データ</h2>";
     weatherHTML += "<p>天気: " + weatherData.weather[0].description + "</p>";
     weatherHTML += "<p>気温: " + weatherData.main.temp + "℃</p>";
