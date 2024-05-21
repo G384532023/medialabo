@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>検索エンジン</title>
     <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="css2" />
 </head>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 16
+    }
+</style>
 
 <body>
     <div class="search-container">
-        <h1>検索エンジン</h1>
-        <input type="text" id="search" name="search" placeholder="検索キーワードを入力">
-        <button onclick="searchData()">検索</button>
+        <h1>特殊検索エンジン</h1>
+        <input type="text" id="search" name="search" placeholder="検索キーワードを入力"><button onclick="searchData()"><i class="material-symbols-outlined" id="kyc-search-mark">search</i></button>
     </div>
 
     <div id="result" class="result-container">

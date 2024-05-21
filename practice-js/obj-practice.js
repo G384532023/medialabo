@@ -1,4 +1,4 @@
-//////////////// ここは書き換えてはいけない！ 
+
 
 let campus = {
 	address: "八王子市館町",
@@ -14,5 +14,14 @@ let gakka = [
 	{name: "デザイン学科", ename: "Department of Design"}
 ];
 
-//////////////// ここから下にプログラムを書きたそう!
+console.log(campus.address);
 
+// D館の教室名を出力
+for (let room of campus.buildingD) {
+    console.log(room);
+}
+
+// 学科名を出力
+for (let department of gakka) {
+    console.log(department.name);
+}

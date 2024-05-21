@@ -364,6 +364,7 @@ function displayNHKData(resultDiv) {
         nhkHTML += "</tr>";
     });
     nhkHTML += "</table></div>";
+    console.log(nhkHTML);
     resultDiv.innerHTML = nhkHTML;
 }
 
@@ -374,12 +375,12 @@ function displayGourmetData(resultDiv) {
     gourmetHTML += "<tr><th>項目名</th><th>項目の説明</th></tr>";
 
     gourmetData.results.shop.forEach(function(shop) {
+        gourmetHTML += "<tr><td>店舗名</td><td>" + shop.name + "</td></tr>";
         gourmetHTML += "<tr><td>アクセス情報</td><td>" + shop.access + "</td></tr>";
         gourmetHTML += "<tr><td>住所</td><td>" + shop.address + "</td></tr>";
         gourmetHTML += "<tr><td>予算</td><td>" + shop.budget.name + "</td></tr>";
         gourmetHTML += "<tr><td>キャッチコピー</td><td>" + shop.catch + "</td></tr>";
         gourmetHTML += "<tr><td>ジャンル</td><td>" + shop.genre.name + "</td></tr>";
-        gourmetHTML += "<tr><td>店舗名</td><td>" + shop.name + "</td></tr>";
         gourmetHTML += "<tr><td>営業日時</td><td>" + shop.open + "</td></tr>";
         gourmetHTML += "<tr><td>最寄駅</td><td>" + shop.station_name + "</td></tr>";
         gourmetHTML += "<tr><td>サブジャンルの名前</td><td>" + shop.sub_genre.name + "</td></tr>";
@@ -404,3 +405,5 @@ function displayWeatherData(resultDiv) {
     weatherHTML += "</div>";
     resultDiv.innerHTML = weatherHTML;
 }
+
+
