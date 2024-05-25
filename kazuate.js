@@ -2,25 +2,20 @@
 let kotae = Math.floor(Math.random() * 10) + 1;
 console.log('答え（デバッグ用）: ' + kotae);
 
-// 入力回数（予想回数）
 let kaisu = 0;
 
-// ボタン要素を取得
 let button = document.getElementById("button");
 
-// ボタンクリック時の処理を設定
 button.addEventListener("click", hantei);
 
-// ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
-  // テキストボックスから値を取得
   let yoso = document.getElementById("inputNumber").value;
-  yoso = parseInt(yoso); // 文字列から数値への変換
+  yoso = parseInt(yoso); // 文
 
-  // 空欄や無効な入力のチェック
+
   if (isNaN(yoso) || yoso < 1 || yoso > 10) {
     console.log("1から10までの数字を入力してください。");
-    return; // 処理を終了
+    return; 
   }
   kaisu++;
   console.log(kaisu+"回目の予想: "+yoso);
@@ -35,6 +30,7 @@ function hantei() {
     }else{
         console.log("正解です、おめでとう!");
         document.getElementById("result").textContent = "正解です、おめでとう!";
+        kaisu = 0;
     }
   } else {
     if (yoso < kotae && (kaisu === 1 || kaisu === 2)) {

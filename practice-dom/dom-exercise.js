@@ -15,12 +15,56 @@ let data = [
 
 // 練習4-2 メッセージ追加プログラム
 
+let h2 = document.querySelector('h2#ex42');
+let p = document.createElement('p');
+p.textContent = '写真表と年の緯度軽度のページです。';
+p.style.textEmphasis= 'sesame green';
+h2.insertAdjacentElement('afterend', p);
+
+
 
 // 練習4-3 写真表作成プログラム
 
+let image = [
+	{name:'taro.png'},
+	{name:'jiro.png'},
+	{name:'hanako.png'},
+];
 
+let div = document.querySelector('div#phototable');
+
+
+for (let im of image) {
+
+	let p2 = document.createElement('p');
+	let img = document.createElement('img');
+    img.setAttribute('src',`${im.name}`);
+	div.insertAdjacentElement('beforeend', p2);
+	p2.insertAdjacentElement('beforeend', img);
+    
+    p2.appendChild(img);
+}
 // 練習4-4 箇条書き削除プログラム
+// 練習4-4目標: ul#location 要素の中の li 要素を全て削除
+
+
+let listItems = document.querySelectorAll('ul#location > li');
+
+for (let listItem of listItems) {
+    listItem.remove();
+}
 
 
 // 練習4-5 箇条書き追加プログラム
 
+let locationList = document.querySelector('ul#location');
+
+
+for (let city of data) {
+
+    let listItem = document.createElement('li');
+    
+    listItem.textContent = `${city.name} ... 緯度: ${city.lat}, 経度: ${city.lng}`;
+    
+    locationList.appendChild(listItem);
+}
