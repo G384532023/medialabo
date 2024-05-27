@@ -3,6 +3,81 @@ var unit = 100,
     info = {}, // 全キャンバス共通の描画情報
     colorList; // 各キャンバスの色情報
 
+    document.addEventListener('DOMContentLoaded', function() {
+        function togglePopup(popupId, action) {
+            let popup = document.getElementById(popupId);
+            if (action === 'show') {
+                popup.classList.remove('fadeout');
+                popup.style.display = 'block';
+            } else if (action === 'hide') {
+                popup.classList.add('fadeout');
+                setTimeout(function() {
+                    popup.style.display = 'none';
+                }, 500);
+            }
+        }
+    
+        document.getElementById('show-popup').addEventListener('click', function() {
+            togglePopup('popup-a', 'show');
+        });
+    
+        document.getElementById('hide-popup').addEventListener('click', function() {
+            togglePopup('popup-a', 'hide');
+        });
+    
+        document.getElementById('show-popup2').addEventListener('click', function() {
+            togglePopup('popup-b', 'show');
+        });
+    
+        document.getElementById('hide-popup2').addEventListener('click', function() {
+            togglePopup('popup-b', 'hide');
+        });
+    
+        document.getElementById('show-popup3').addEventListener('click', function() {
+            togglePopup('popup-c', 'show');
+        });
+    
+        document.getElementById('hide-popup3').addEventListener('click', function() {
+            togglePopup('popup-c', 'hide');
+        });
+    
+        document.getElementById('show-popup4').addEventListener('click', function() {
+            togglePopup('popup-d', 'show');
+        });
+    
+        document.getElementById('hide-popup4').addEventListener('click', function() {
+            togglePopup('popup-d', 'hide');
+        });
+    
+        document.getElementById('show-popup5').addEventListener('click', function() {
+            togglePopup('popup-e', 'show');
+        });
+    
+        document.getElementById('hide-popup5').addEventListener('click', function() {
+            togglePopup('popup-e', 'hide');
+        });
+    
+        document.getElementById('show-popup6').addEventListener('click', function() {
+            togglePopup('popup-f', 'show');
+        });
+    
+        document.getElementById('hide-popup6').addEventListener('click', function() {
+            togglePopup('popup-f', 'hide');
+        });
+    
+        document.getElementById('show-popup7').addEventListener('click', function() {
+            togglePopup('popup-g', 'show');
+        });
+    
+        document.getElementById('hide-popup7').addEventListener('click', function() {
+            togglePopup('popup-g', 'hide');
+        });
+    });
+    
+    
+    
+    
+
 
 
 
@@ -122,5 +197,7 @@ function changeColor() {
 
 	// h1 の文字を青色に
 }
+
+
 
 init();
