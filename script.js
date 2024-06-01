@@ -3,6 +3,7 @@ var unit = 100,
     info = {}, // 全キャンバス共通の描画情報
     colorList; // 各キャンバスの色情報
 
+
     document.addEventListener('DOMContentLoaded', function() {
         function togglePopup(popupId, action) {
             let popup = document.getElementById(popupId);
@@ -71,6 +72,10 @@ var unit = 100,
     
         document.getElementById('hide-popup7').addEventListener('click', function() {
             togglePopup('popup-g', 'hide');
+        });
+
+        document.getElementById('hide-spopup').addEventListener('click', function() {
+            togglePopup('startpopup', 'hide');
         });
     });
     
