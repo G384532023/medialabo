@@ -3,37 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
-    flex-direction: column;
     text-align: center;
 }
-
-.kyc-search-bar{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    width: calc(60% - 80px);
-    border-radius: 30px;
-    margin: 5px;
-    border: solid 1px #dcdcdc;
-}
-    
-.kyc-search-box{
-    font-size: 66px;
-    width: 100%;
-    border: none;
-    outline: none;
-}
-
-i.kyc-search-mark{
-    margin-left: 10px;
-    margin-right: 5px;
-    color: #9aa0a6;
-}
-
-
-
 
 .container {
     max-width: 800px;
@@ -42,52 +13,57 @@ i.kyc-search-mark{
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* 中央揃えを解除 */
 }
 
-input[type="text"] {
-    width: calc(50% - 80px);
-    padding: 10px;
+select,
+button {
+    margin: 10px;
+    padding: 8px 16px;
     font-size: 16px;
-    border-radius: 5px 0 0 5px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
     outline: none;
+    cursor: pointer;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
     background-color: #1690d2;
     color: white;
     border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
 }
 
 button:hover {
     background-color: #7afefc;
 }
 
-.data-box {
+#nhkInfo,
+#gourmetInfo,
+#weatherInfo {
     margin-top: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left; /* 中央揃えを解除 */
 }
 
-.data-box h2 {
+#nhkInfo div,
+#gourmetInfo div,
+#weatherInfo div{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left; /* 中央揃えを解除 */
+}
+
+#nhkInfo h3,
+#gourmetInfo h3,
+#weatherInfo h3 {
     margin-top: 0;
-}
-
-.data-box table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.data-box table th,
-.data-box table td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
 }
 
 .no-result-box {
@@ -102,3 +78,13 @@ button:hover {
     margin: 0;
 }
 
+@media (max-width: 600px) {
+    select,
+    button {
+        width: 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
