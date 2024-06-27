@@ -1,34 +1,77 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>検索エンジン</title>
     <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="" />
+    <title>情報検索プロジェクト</title>
 </head>
-<style>
-    .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 16
-    }
-</style>
-
 <body>
-    <div class="search-container">
-        <h1>特殊検索エンジン</h1>
-        <input type="text" id="search" name="search" placeholder="検索キーワードを入力"><button onclick="searchData()"><i class="material-symbols-outlined" id="kyc-search-mark">search</i></button>
-    </div>
+    <h1>情報検索プロジェクト</h1>
+    
+    <h2>NHK番組表検索</h2>
+    <select id="nhkServiceSelect">
+        <option value="g1">NHK総合1</option>
+        <option value="e1">Eテレ1</option>
+    </select>
+    <select id="nhkGenreSelect">
+        <option value="0000">ニュース・報道</option>
+        <option value="0100">スポーツ</option>
+        <option value="0205">情報・ワイドショー</option>
+        <option value="0300">ドラマ</option>
+        <option value="0409">音楽</option>
+        <option value="0502">バラエティ</option>
+        <option value="0600">映画</option>
+        <option value="0700">アニメ</option>
+        <option value="0800">ドキュメンタリー・教養</option>
+        <option value="0903">劇場・公演</option>
+        <option value="1000">趣味・教育</option>
+        <option value="1100">福祉</option>
+    </select>
+    <button id="showNhkBtn">番組を表示</button>
+    <div id="nhkInfo"></div>
+    
+    <h2>グルメ情報検索</h2>
+    <select id="gourmetGenreSelect">
+        <option value="G001">居酒屋</option>
+        <option value="G002">ダイニングバー・バル</option>
+        <option value="G003">創作料理</option>
+        <option value="G004">和食</option>
+        <option value="G005">洋食</option>
+        <option value="G006">イタリアン・フレンチ</option>
+        <option value="G007">中華</option>
+        <option value="G008">焼肉・ホルモン</option>
+        <option value="G009">アジア・エスニック料理</option>
+        <option value="G010">各国料理</option>
+        <option value="G011">カラオケ・パーティ</option>
+        <option value="G012">バー・カクテル</option>
+        <option value="G013">ラーメン</option>
+        <option value="G014">カフェ・スイーツ</option>
+        <option value="G015">その他グルメ</option>
+        <option value="G016">お好み焼き・もんじゃ</option>
+        <option value="G017">韓国料理</option>
+    </select>
+    <button id="showGourmetBtn">グルメ情報を表示</button>
+    <div id="gourmetInfo"></div>
 
-    <div id="result" class="result-container">
-        <!-- 検索結果はここに表示 -->
-    </div>
+    <h2>世界の天気情報</h2>
+    <select id="weatherCitySelect">
+        <option value="360630">Cairo</option>
+        <option value="524901">Moscow</option>
+        <option value="993800">Johannesburg</option>
+        <option value="1816670">Beijing</option>
+        <option value="1850147">Tokyo</option>
+        <option value="1880252">Singapore</option>
+        <option value="2147714">Sydney</option>
+        <option value="2643743">London</option>
+        <option value="2968815">Paris</option>
+        <option value="3451189">Rio de Janeiro</option>
+        <option value="5128581">New York</option>
+        <option value="5368361">Los Angeles</option>
+    </select>
+    <button id="showWeatherBtn">天気を表示</button>
+    <div id="weatherInfo"></div>
 
     <script src="project.js"></script>
 </body>
-
 </html>
